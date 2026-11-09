@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>국토환경성평가지도 활용안내</title>
+<meta name="description" content="국토환경성평가지도(ECVAM)의 개념과 WebGIS 이용 방법을 처음 사용자, 토지개발 사업자, 지자체, 환경영향평가 협의기관, 연구자별로 안내합니다.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="6" fill="#fff" fill-opacity=".1"/><rect x="4" y="5" width="3.2" height="16" rx="1" fill="var(--g1)"/><rect x="7.7" y="5" width="3.2" height="16" rx="1" fill="var(--g2)"/><rect x="11.4" y="5" width="3.2" height="16" rx="1" fill="var(--g3)"/><rect x="15.1" y="5" width="3.2" height="16" rx="1" fill="var(--g4)"/><rect x="18.8" y="5" width="3.2" height="16" rx="1" fill="var(--g5)"/></svg><span><small>국토환경성평가지도</small>활용안내</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg> 메뉴</button>
+    <nav class="nav" id="nav" aria-label="주요 메뉴">
+<a href="concept.html">개념</a><a href="guide.html">초보자 매뉴얼</a><a href="developer.html">사업자</a><a href="local-gov.html">지자체</a><a href="eia.html">협의기관</a><a href="planning.html">환경계획</a><a href="researcher.html">연구자</a>      <a class="ext" href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">WebGIS 지도보기 <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg></a>
+    </nav>
+  </div>
+  <div class="grade-band" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">국토환경성평가지도 · ECVAM</p>
+        <h1>국토의 환경적 가치를 읽는 지도,<br>업무에 맞게 활용하는 방법</h1>
+        <p class="lead">전국 토지의 환경적 가치를 1~5등급으로 평가한 국토환경성평가지도를 처음 쓰는 분부터 토지개발 사업자, 지자체, 환경영향평가 협의기관, 연구자까지 목적별로 활용하는 방법을 안내합니다.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">WebGIS 지도보기 <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg></a>
+          <a class="btn btn-ghost" href="concept.html">개념부터 알아보기 <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="hero-map"><svg viewBox="0 0 420 300" aria-hidden="true">
+<defs><clipPath id="tile"><rect x="0" y="0" width="420" height="300" rx="16"/></clipPath>
+<pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#fff" stroke-opacity=".07"/></pattern></defs>
+<g clip-path="url(#tile)">
+<rect width="420" height="300" fill="var(--navy-2)"/>
+<path d="M0 60C60 30 110 90 170 70S260 10 330 40 420 20 420 20V0H0z" fill="var(--g1)" opacity=".9"/>
+<path d="M0 60C60 30 110 90 170 70S260 10 330 40 420 20 420 20v70C370 120 300 95 240 130S120 150 60 120 0 150 0 150z" fill="var(--g2)" opacity=".85"/>
+<path d="M0 150c60-30 120 10 180 0s110-40 170-20 70 30 70 30v60c-70-10-120 30-190 20S120 220 60 240 0 230 0 230z" fill="var(--g3)" opacity=".85"/>
+<path d="M0 230c60-10 110 20 170 10s120-30 180-10 70 20 70 20v50H0z" fill="var(--g4)" opacity=".85"/>
+<path d="M230 230c30-10 70 0 95 15s40 35 40 55H200c-5-25 5-60 30-70z" fill="var(--g5)" opacity=".9"/>
+<path d="M60 190c20-10 40 10 60 0s30-30 60-20 20 20 20 20-10 30-40 40-60 10-80 0-30-30-20-40z" fill="var(--g1)" opacity=".55"/>
+<path d="M30 20C90 70 60 140 120 190s150 60 230 100" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"/>
+<rect width="420" height="300" fill="url(#grid)"/>
+<circle cx="285" cy="150" r="9" fill="#fff"/><circle cx="285" cy="150" r="4" fill="var(--navy)"/>
+<circle cx="285" cy="150" r="26" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.5"/>
+<circle cx="285" cy="150" r="48" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1" stroke-dasharray="3 4"/>
+</g>
+<rect x=".5" y=".5" width="419" height="299" rx="16" fill="none" stroke="#fff" stroke-opacity=".25"/>
+</svg></div>
+    </div>
+  </section>
+
+  <section class="legend" aria-labelledby="legend-h">
+    <div class="wrap">
+      <div class="legend-head"><h2 id="legend-h">환경적 보전가치에 따른 5개 등급</h2><a href="concept.html#grades">등급의 의미 자세히 보기</a></div>
+      <div class="legend-grid">
+<div class="g g1"><b>1등급</b><em>매우 높음</em><p>법·제도로 보호되거나, 생태적으로 우수한 자연환경을 지닌 지역</p></div><div class="g g2"><b>2등급</b><em>높음</em><p>법제적·생태적으로 다소 우수한 자연환경을 지닌 지역</p></div><div class="g g3"><b>3등급</b><em>보통</em><p>우수한 자연환경 주변 지역. 친환경적 계획 수립을 원칙으로 함</p></div><div class="g g4"><b>4등급</b><em>낮음</em><p>기 개발지 인근. 환경용량을 고려한 친환경 개발 유도 지역</p></div><div class="g g5"><b>5등급</b><em>매우 낮음</em><p>이미 개발된 지역. 환경을 충분히 배려하며 개발을 수용해야 하는 지역</p></div>      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="wrap">
+      <div class="notice" role="note">
+        <p><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5h.01"/></svg><span>별도의 회원가입 없이 누구나 무료로 사용할 수 있습니다.</span></p>
+        <p><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5h.01"/></svg><span>공간정보 다운로드나 Open API 사용 시에만 로그인이 필요합니다.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section" aria-labelledby="start-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="start-h">처음 사용하시나요?</h2><p>개념을 먼저 익히고, 매뉴얼을 따라 WebGIS 화면에 익숙해지세요.</p></div>
+      <div class="cards start">
+        <div class="card">
+          <div class="card-head"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5.9 1.1 1 1.8V17h5v-1.3c.1-.7.4-1.3 1-1.8A6 6 0 0 0 12 3z"/></svg></div><h3><small>기본 개념</small><a href="concept.html">국토환경성평가지도 개념</a></h3></div>
+          <p>전국 토지의 환경적 가치를 1~5등급으로 평가한 지도입니다. 왜 만들었는지, 어떤 법에 근거하는지, 등급이 무엇을 뜻하고 어떻게 산정되는지 정리했습니다.</p>
+          <ol><li><a href="concept.html#what"><span class="n">01</span>국토환경성평가지도란?</a></li><li><a href="concept.html#background"><span class="n">02</span>추진배경</a></li><li><a href="concept.html#legal-basis"><span class="n">03</span>추진 근거</a></li><li><a href="concept.html#grades"><span class="n">04</span>등급의 의미</a></li><li><a href="concept.html#process"><span class="n">05</span>평가 과정</a></li><li><a href="concept.html#legal-items"><span class="n">06</span>법제적 평가항목</a></li><li><a href="concept.html#eco-items"><span class="n">07</span>환경·생태적 평가항목</a></li></ol>
+        </div>
+        <div class="card">
+          <div class="card-head"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-8M12 13c0-4.5 3-7.5 8-7.5-.8 5-3.5 7.5-8 7.5zM12 13c0-3.3-2.2-5.5-6-5.5.6 4 2.7 5.5 6 5.5z"/></svg></div><h3><small>처음 사용하는 분</small><a href="guide.html">시스템 이용 초보자를 위한 매뉴얼</a></h3></div>
+          <p>WebGIS 지도 접속부터 화면 구성, 레이어 조회, 검색, 등급 분석, 모바일 이용까지 기본 사용법을 순서대로 안내합니다.</p>
+          <ol><li><a href="guide.html#connect"><span class="n">01</span>WebGIS 지도 연결</a></li><li><a href="guide.html#layout"><span class="n">02</span>WebGIS 시스템 구성</a></li><li><a href="guide.html#layers"><span class="n">03</span>레이어 조회 기능</a></li><li><a href="guide.html#split-view"><span class="n">04</span>분할화면 보기</a></li><li><a href="guide.html#basemap"><span class="n">05</span>배경지도, 도엽도, 지적도 등 조회</a></li><li><a href="guide.html#search"><span class="n">06</span>통합검색, 지번검색</a></li><li><a href="guide.html#grade-analysis"><span class="n">07</span>국토환경성 평가등급 분석</a></li><li><a href="guide.html#mobile"><span class="n">08</span>모바일 사용자 매뉴얼</a></li></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section" aria-labelledby="aud-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="aud-h">대상자별 활용 안내</h2><p>업무 목적에 맞는 기능과 절차를 사례 중심으로 정리했습니다.</p></div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-head"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9h8v12M8 9V5l9-2v6M17 9v12M8 13h2M8 17h2"/></svg></div><h3><small>대상자별 활용</small><a href="developer.html">토지개발행위 사업자</a></h3></div>
+          <p>개발 예정 부지의 환경등급과 입지 규제를 확인하고, 반경·면적 분석과 과거 자료 조회로 사업 추진 전에 환경적 위험 요소를 점검합니다.</p>
+          <ul><li><a href="developer.html#search">지번/좌표 검색</a></li><li><a href="developer.html#grade-analysis">국토환경성평가등급 분석 기능</a></li><li><a href="developer.html#overlay">입지 규제 레이어 중첩</a></li><li><a href="developer.html#buffer">반경 분석</a></li><li><a href="developer.html#measure">거리 및 면적 측정</a></li><li><a href="developer.html#land-use">토지이용규제정보</a></li><li><a href="developer.html#history">과거 자료 조회</a></li><li><a href="developer.html#cases">활용 사례</a></li></ul>
+        </div>
+        <div class="card">
+          <div class="card-head"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 18h16M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 10h18L12 4z"/></svg></div><h3><small>대상자별 활용</small><a href="local-gov.html">지자체</a></h3></div>
+          <p>민원 대응 근거 제시, 재난 취약지 분석, 경관 심의, 행정구역별 등급 통계 관리와 환경영향평가서 검토에 활용하는 방법입니다.</p>
+          <ul><li><a href="local-gov.html#complaints">민원 대응 데이터 제시</a></li><li><a href="local-gov.html#disaster">재난 취약지 및 안전 관리 분석</a></li><li><a href="local-gov.html#viewshed">경관 심의 및 가시권 조회</a></li><li><a href="local-gov.html#statistics">행정구역 별 환경 등급 통계 관리</a></li><li><a href="local-gov.html#cases">활용 사례</a></li></ul>
+        </div>
+        <div class="card">
+          <div class="card-head"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M6 21h12M12 6l-6 1.5M12 6l6 1.5M3 13.5l3-6 3 6a3 3 0 0 1-6 0zM15 13.5l3-6 3 6a3 3 0 0 1-6 0z"/></svg></div><h3><small>대상자별 활용</small><a href="eia.html">환경영향평가 협의기관</a></h3></div>
+          <p>환경입지컨설팅, 스크리닝, 입지적정성 검토 단계에서 법제적 평가항목 레이어와 등급 분석 결과를 근거 자료로 활용하는 방법입니다.</p>
+          <ul><li><a href="eia.html#consulting">환경입지컨설팅</a></li><li><a href="eia.html#screening">스크리닝 활용</a></li><li><a href="eia.html#suitability">입지적정성 활용</a></li></ul>
+        </div>
+        <div class="card">
+          <div class="card-head"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3h5M10 3v6l-5.5 9.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3M7.5 15h9"/></svg></div><h3><small>대상자별 활용</small><a href="researcher.html">연구자</a></h3></div>
+          <p>GeoTIFF 원본 데이터 다운로드, Open API로 QGIS 연동, 등급 데이터를 활용한 공간 분석 방법입니다.</p>
+          <ul><li><a href="researcher.html#download">공간정보 원본 데이터 다운로드</a></li><li><a href="researcher.html#open-api">Open API 연동</a></li><li><a href="researcher.html#analysis">국토환경성평가지도를 활용한 데이터 분석</a></li></ul>
+        </div>
+        <div class="card wide">
+          <div class="card-head"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg></div><h3><small>지자체 환경계획 담당자</small><a href="planning.html">환경계획 수립</a></h3></div>
+          <p>지역 환경 현황 분석부터 계획 상충성 검토, 타 지자체 사례 참고, 범부처 데이터 연계, 법정계획 DB와 AI-Hub 데이터 활용까지 환경계획 수립 전 과정에 적용합니다.</p>
+          <ol><li><a href="planning.html#status"><span class="n">01</span>지역 환경 현황 분석</a></li><li><a href="planning.html#conflict"><span class="n">02</span>계획 상충성 분석</a></li><li><a href="planning.html#strategy"><span class="n">03</span>공간환경구조 및 보전 전략 수립</a></li><li><a href="planning.html#report"><span class="n">04</span>계획 확정 및 정책 보고</a></li><li><a href="planning.html#cases"><span class="n">05</span>타지자체 환경계획 사례 참고하기</a></li><li><a href="planning.html#data-link"><span class="n">06</span>범부처 데이터 연계를 통한 통합 환경계획 수립</a></li><li><a href="planning.html#data-catalog"><span class="n">07</span>환경공간정보 목록 활용 가이드</a></li><li><a href="planning.html#legal-plans"><span class="n">08</span>환경관련 법정계획 데이터베이스 활용</a></li><li><a href="planning.html#ai-hub"><span class="n">09</span>Ai-Hub 데이터 연계 및 활용</a></li></ol>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <b>국토환경성평가지도 활용안내</b>
+      <p>국토환경성평가지도(ECVAM) 시스템의 이용 방법을 대상자별로 정리한 안내서입니다.<br>「환경정책기본법」 제23조 및 같은 법 시행령 제11조의2에 따라 작성·보급하는 지도를 기준으로 합니다.</p>
+    </div>
+    <ul>
+      <li><a href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">국토환경성평가지도 ecvam.neins.go.kr</a></li>
+      <li><a href="https://www.neins.go.kr" target="_blank" rel="noopener">국토환경정보시스템 neins.go.kr</a></li>
+      <li><a href="https://www.kei.re.kr" target="_blank" rel="noopener">한국환경연구원(KEI)</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>환경계획 수립 · 국토환경성평가지도 활용안내</title>
+<meta name="description" content="지역 환경 현황 분석부터 계획 상충성 검토, 타 지자체 사례 참고, 범부처 데이터 연계, 법정계획 DB와 AI-Hub 데이터 활용까지 환경계획 수립 전 과정에 적용합니다.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="6" fill="#fff" fill-opacity=".1"/><rect x="4" y="5" width="3.2" height="16" rx="1" fill="var(--g1)"/><rect x="7.7" y="5" width="3.2" height="16" rx="1" fill="var(--g2)"/><rect x="11.4" y="5" width="3.2" height="16" rx="1" fill="var(--g3)"/><rect x="15.1" y="5" width="3.2" height="16" rx="1" fill="var(--g4)"/><rect x="18.8" y="5" width="3.2" height="16" rx="1" fill="var(--g5)"/></svg><span><small>국토환경성평가지도</small>활용안내</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg> 메뉴</button>
+    <nav class="nav" id="nav" aria-label="주요 메뉴">
+<a href="concept.html">개념</a><a href="guide.html">초보자 매뉴얼</a><a href="developer.html">사업자</a><a href="local-gov.html">지자체</a><a href="eia.html">협의기관</a><a href="planning.html" aria-current="page">환경계획</a><a href="researcher.html">연구자</a>      <a class="ext" href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">WebGIS 지도보기 <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg></a>
+    </nav>
+  </div>
+  <div class="grade-band" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</header>
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="현재 위치"><a href="index.html">홈</a><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>지자체 환경계획 담당자</span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>환경계획 수립</span></nav>
+      <div class="page-title"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg></div><h1><small>지자체 환경계획 담당자</small>환경계획 수립</h1></div>
+      <p class="page-lead">지역 환경 현황 분석부터 계획 상충성 검토, 타 지자체 사례 참고, 범부처 데이터 연계, 법정계획 DB와 AI-Hub 데이터 활용까지 환경계획 수립 전 과정에 적용합니다.</p>
+    </div>
+  </div>
+  <div class="wrap layout">
+    <div class="content">
+      <div class="single"><h2 id="status"><span class="num">01</span>지역 환경 현황 분석</h2>
+<ul>
+<li>우리 시·군·구의 등급별 면적과 생태적 우수 지역을 파악</li>
+</ul>
+<ol>
+<li><kbd class="ui">등급통계</kbd> 메뉴에서 시·군·구 단위로 1~5등급지의 면적과 비율(%)을 확인</li>
+<li><kbd class="ui">레이어 조회</kbd> → <kbd class="ui">국토환경성평가지도</kbd> 1등급지에서 우리 지역의 핵심 생태축이 어디에 형성되어 있는지 시각적으로 파악</li>
+<li><kbd class="ui">투명도 조절</kbd> 위성지도와 겹쳐 보면서 1등급지가 실제 산림인지, 수변인지 등 지형적 특성 분석</li>
+</ol>
+<h2 id="conflict"><span class="num">02</span>계획 상충성 분석</h2>
+<ul>
+<li>개발 예정지와 보전 가치가 높은 곳이 충돌하는지 확인</li>
+</ul>
+<ol>
+<li><kbd class="ui">SHP 파일 업로드</kbd>에서 '산업단지 계획'과 같은 개발 예정지 SHP파일 업로드</li>
+<li><kbd class="ui">다중 레이어 중첩</kbd>에서 1등급 레이어와 업로드한 계획선을 겹쳐서 <strong>'등급 침해 면적'</strong>을 분석</li>
+<li><kbd class="ui">토지이용규제 연계</kbd>에서 상충지역의 필지를 마우스 우클릭하여 법적 제한 사항을 교차 검토</li>
+</ol>
+<h2 id="strategy"><span class="num">03</span>공간환경구조 및 보전 전략 수립</h2>
+<ul>
+<li>어디를 복원할지 공간적으로 결정</li>
+<li><kbd class="ui">가시권 분석</kbd>을 통해 주요 경관 보호 지역이나 문화재 주변에 높은 건물이 들어설 경우 생태 경관에 미치는 영향을 미리 시뮬레이션</li>
+<li><kbd class="ui">거리/면적 측정</kbd> 설정하려는 폭이나 선형 연결구간의 길이를 측정하여 계획의 정밀도 높임</li>
+</ul>
+<h2 id="report"><span class="num">04</span>계획 확정 및 정책 보고</h2>
+<ul>
+<li><kbd class="ui">지도 다운로드 (JPG/PDF)</kbd>: 분석 결과가 반영된 지도를 고해상도로 내려받아 환경계획서 본문에 삽입</li>
+<li><kbd class="ui">메타정보 엑셀 다운로드</kbd>: 계획에 포함된 레이어들의 최신 갱신 일자와 근거 법령 정보를 엑셀로 내려받아 부록(데이터 출처)에 명시</li>
+</ul>
+<h2 id="cases"><span class="num">05</span>타지자체 환경계획 사례 참고하기</h2>
+<ol>
+<li><kbd class="ui">환경계획 정보</kbd> → <kbd class="ui">국토-환경계획 수립사례</kbd> 메뉴로 접속하여 지자체별 계획 문서 확인</li>
+<li>우리 지역과 인구 규모, 지형적 특성이 유사한 지자체의 선행 사례 검색</li>
+<li>과거부터 최신 계획까지 시계열별 사례를 검토하여 환경 정책의 변화와 발전 방향 분석</li>
+<li><kbd class="ui">공간환경계획 수립사례</kbd> 탭에서 타 지자체의 우수 지도 제작 사례(핵심보전구역 설정, 소외지역 분석 등)를 참고</li>
+<li>개별 사례의 <strong>활용 데이터 목록, 분석 알고리즘, 주요 분석 도구</strong> 등을 학습하여 우리 지역 환경계획에 참고</li>
+</ol>
+<p><figure class="shot figure"><a href="assets/img/plan/plan-01.webp"><img alt="타지자체 환경계획 사례" height="1522" loading="lazy" src="assets/img/plan/plan-01.webp" width="1600"/></a><figcaption>타지자체 환경계획 사례</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/plan/plan-02.webp"><img alt="국토-환경계획 수립사례 화면" height="1486" loading="lazy" src="assets/img/plan/plan-02.webp" width="1600"/></a><figcaption>국토-환경계획 수립사례 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/plan/plan-03.webp"><img alt="수립사례 목록 화면" height="1390" loading="lazy" src="assets/img/plan/plan-03.webp" width="1600"/></a><figcaption>수립사례 목록 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/plan/plan-04.webp"><img alt="공간환경계획 수립사례 화면" height="1004" loading="lazy" src="assets/img/plan/plan-04.webp" width="1343"/></a><figcaption>공간환경계획 수립사례 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/plan/plan-05.webp"><img alt="수립사례 상세 화면" height="1081" loading="lazy" src="assets/img/plan/plan-05.webp" width="1315"/></a><figcaption>수립사례 상세 화면</figcaption></figure></p>
+<h2 id="data-link"><span class="num">06</span>범부처 데이터 연계를 통한 통합 환경계획 수립</h2>
+<ul>
+<li><kbd class="ui">자료제공서비스</kbd> → <kbd class="ui">환경공간 정보</kbd> 탭에서 산재된 환경 관련 공간 정보를 단일 플랫폼에서 통합 조회</li>
+<li>토양·지하수, 재난재해, 인구 분석, 토지이용 등 환경계획 수립에 필수적인 10개 카테고리, 103건의 데이터 제공</li>
+<li>국토부(토지), 산림청(식생), 기상청(기후) 등 유관 기관의 최신 정보를 연계하여 행정적 일관성을 갖춘 통합 공간 환경계획 수립 가능</li>
+<li>래스터, 포인트, 폴리곤 등 다양한 자료 유형을 선택하여 분석 목적에 맞는 정밀한 공간 분석 환경 지원</li>
+</ul>
+<p><figure class="shot figure"><a href="assets/img/plan/plan-06.webp"><img alt="환경공간 정보 탭 화면" height="1020" loading="lazy" src="assets/img/plan/plan-06.webp" width="1600"/></a><figcaption>환경공간 정보 탭 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/plan/plan-07.webp"><img alt="환경공간 정보 목록 화면" height="1137" loading="lazy" src="assets/img/plan/plan-07.webp" width="1348"/></a><figcaption>환경공간 정보 목록 화면</figcaption></figure></p>
+<h2 id="data-catalog"><span class="num">07</span>환경공간정보 목록 활용 가이드</h2>
+<ul>
+<li>국내 산재된 환경 공간정보의 출처, 규격, 갱신 주기 등을 기록한 데이터 통합 명세서 제공</li>
+<li>다운로드 전, 어떤 데이터가 존재하는지와 생성 기관을 한눈에 파악</li>
+<li>분석에 적합한 데이터 포맷(SHP, GeoTiff, XLS 등)과 공간 스케일(필지 단위 등) 사전 검토 가능</li>
+<li>환경계획 수립 시<ul>
+<li>데이터 가용성 판별: 특정 분석에 필요한 공간자료의 존재 여부 확인</li>
+<li>행정 신뢰도 확보: 계획서에 인용할 데이터의 공식 출처 기관과 기준 일자를 정확히 파악하여 보고서의 객관성 강화</li>
+</ul>
+</li>
+</ul>
+<figure class="shot figure"><a href="assets/img/plan/plan-08.webp"><img alt="환경공간정보 목록 화면" height="1223" loading="lazy" src="assets/img/plan/plan-08.webp" width="1314"/></a><figcaption>환경공간정보 목록 화면</figcaption></figure>
+<h2 id="legal-plans"><span class="num">08</span>환경관련 법정계획 데이터베이스 활용</h2>
+<ul>
+<li>환경정책기본법, 탄소중립기본법 등 계획 수립의 근거가 되는 법령 즉시 확인</li>
+<li>국가(종합계획) - 시·도(환경계획) - 시·군·구(기본계획)로 이어지는 환경 계획의 수직적 체계 도식화</li>
+<li>우측 <kbd class="ui">첨부파일</kbd> 아이콘을 통해 실제 승인된 계획서 원문을 다운로드하여 세부 내용 검토</li>
+<li>환경계획 수립 시<ul>
+<li>상위 계획과의 정합성 검토: 지자체 환경계획 수립 시, '국가환경종합계획'이나 '국가 탄소중립 녹색성장 전략'의 목표치와 우리 지역의 계획이 일치하는지 대조하는 근거로 활용</li>
+<li>법적 필수 지표 추출: 각 법령에 명시된 계획 수립 주기(예: 탄소중립 기본계획 5년)와 반드시 포함되어야 할 항목을 누락 없이 파악</li>
+</ul>
+</li>
+</ul>
+<figure class="shot figure"><a href="assets/img/plan/plan-09.webp"><img alt="환경관련 법정계획 DB 화면" height="1251" loading="lazy" src="assets/img/plan/plan-09.webp" width="1324"/></a><figcaption>환경관련 법정계획 DB 화면</figcaption></figure>
+<h2 id="ai-hub"><span class="num">09</span>Ai-Hub 데이터 연계 및 활용</h2>
+<ul>
+<li>국가 AI 데이터 포털(Ai-Hub)과 연계하여, 환경 행정에 즉시 적용 가능한 학습용 고해상도 시각 데이터 및 AI 분석 모델 결과물을 제공하는 곳</li>
+<li>핵심 데이터셋<ul>
+<li><strong>식생 탄소 포집량 데이터</strong>: 지자체 탄소중립 실천 계획 수립 시, 우리 지역 산림·녹지가 실제로 흡수하는 탄소량을 수치화하는 근거가 됨</li>
+<li><strong>국립공원 변화탐지 모니터링</strong>: 드론/위성 영상을 AI가 분석한 자료로, 산림 훼손이나 생태계 복원 상태를 시계열로 파악할 때 유용함</li>
+<li><strong>지역별 토지피복 항공위성 이미지</strong>: 일반 지도보다 훨씬 정밀한(수도권, 경상, 전라 등 지역별) 항공 사진 데이터를 제공하여 현장 조사 없이도 정밀한 지형 분석이 가능</li>
+</ul>
+</li>
+<li>실무 활용 시나리오<ul>
+<li>탄소중립 전략 수립: "우리 시의 녹지 면적 대비 탄소 흡수 효율이 얼마나 되는가?"에 대한 답을 <strong>식생 탄소 포집량 데이터</strong>를 통해 과학적으로 제시</li>
+<li>비대면 환경 모니터링: 사람이 접근하기 어려운 급경사지나 보호지역의 변화를 <strong>AI 변화탐지 데이터</strong>를 활용해 행정 업무의 효율성 극대화</li>
+<li>디지털 시뮬레이션 구축: 고해상도 <strong>항공위성 이미지 데이터</strong>를 GIS 소프트웨어에 입혀서 지역 개발에 따른 환경 영향을 입체적으로 시뮬레이션 할 때 활용</li>
+</ul>
+</li>
+</ul>
+<figure class="shot figure"><a href="assets/img/plan/plan-10.webp"><img alt="Ai-Hub 데이터 연계 화면" height="1237" loading="lazy" src="assets/img/plan/plan-10.webp" width="1384"/></a><figcaption>Ai-Hub 데이터 연계 화면</figcaption></figure></div>
+      <nav class="pager" aria-label="이전·다음 안내">
+<a class="prev" href="eia.html"><small>이전</small><b>환경영향평가 협의기관</b></a><a class="next" href="researcher.html"><small>다음</small><b>연구자</b></a>      </nav>
+    </div>
+    <details class="toc" open>
+      <summary>이 페이지의 내용</summary>
+      <div class="toc-title">이 페이지의 내용</div>
+      <ol>
+<li><a href="#status">지역 환경 현황 분석</a></li><li><a href="#conflict">계획 상충성 분석</a></li><li><a href="#strategy">공간환경구조 및 보전 전략 수립</a></li><li><a href="#report">계획 확정 및 정책 보고</a></li><li><a href="#cases">타지자체 환경계획 사례 참고하기</a></li><li><a href="#data-link">범부처 데이터 연계를 통한 통합 환경계획 수립</a></li><li><a href="#data-catalog">환경공간정보 목록 활용 가이드</a></li><li><a href="#legal-plans">환경관련 법정계획 데이터베이스 활용</a></li><li><a href="#ai-hub">Ai-Hub 데이터 연계 및 활용</a></li>      </ol>
+    </details>
+  </div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <b>국토환경성평가지도 활용안내</b>
+      <p>국토환경성평가지도(ECVAM) 시스템의 이용 방법을 대상자별로 정리한 안내서입니다.<br>「환경정책기본법」 제23조 및 같은 법 시행령 제11조의2에 따라 작성·보급하는 지도를 기준으로 합니다.</p>
+    </div>
+    <ul>
+      <li><a href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">국토환경성평가지도 ecvam.neins.go.kr</a></li>
+      <li><a href="https://www.neins.go.kr" target="_blank" rel="noopener">국토환경정보시스템 neins.go.kr</a></li>
+      <li><a href="https://www.kei.re.kr" target="_blank" rel="noopener">한국환경연구원(KEI)</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>연구자 · 국토환경성평가지도 활용안내</title>
+<meta name="description" content="GeoTIFF 원본 데이터 다운로드, Open API로 QGIS 연동, 등급 데이터를 활용한 공간 분석 방법입니다.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="6" fill="#fff" fill-opacity=".1"/><rect x="4" y="5" width="3.2" height="16" rx="1" fill="var(--g1)"/><rect x="7.7" y="5" width="3.2" height="16" rx="1" fill="var(--g2)"/><rect x="11.4" y="5" width="3.2" height="16" rx="1" fill="var(--g3)"/><rect x="15.1" y="5" width="3.2" height="16" rx="1" fill="var(--g4)"/><rect x="18.8" y="5" width="3.2" height="16" rx="1" fill="var(--g5)"/></svg><span><small>국토환경성평가지도</small>활용안내</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg> 메뉴</button>
+    <nav class="nav" id="nav" aria-label="주요 메뉴">
+<a href="concept.html">개념</a><a href="guide.html">초보자 매뉴얼</a><a href="developer.html">사업자</a><a href="local-gov.html">지자체</a><a href="eia.html">협의기관</a><a href="planning.html">환경계획</a><a href="researcher.html" aria-current="page">연구자</a>      <a class="ext" href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">WebGIS 지도보기 <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg></a>
+    </nav>
+  </div>
+  <div class="grade-band" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</header>
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="현재 위치"><a href="index.html">홈</a><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>대상자별 활용</span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>연구자</span></nav>
+      <div class="page-title"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3h5M10 3v6l-5.5 9.5A2 2 0 0 0 6.2 21h11.6a2 2 0 0 0 1.7-2.5L14 9V3M7.5 15h9"/></svg></div><h1><small>대상자별 활용</small>연구자</h1></div>
+      <p class="page-lead">GeoTIFF 원본 데이터 다운로드, Open API로 QGIS 연동, 등급 데이터를 활용한 공간 분석 방법입니다.</p>
+    </div>
+  </div>
+  <div class="wrap layout">
+    <div class="content">
+      <div class="units"><article class="unit" id="download"><h2>공간정보 원본 데이터 다운로드</h2><ol>
+<li>홈페이지 → <kbd class="ui">다운로드</kbd> 메뉴로 이동</li>
+<li>도엽명, 도엽번호, 지번, 행정구역 중 하나로 검색</li>
+<li><kbd class="ui">GO</kbd> 클릭</li>
+</ol>
+<ul>
+<li>파일 형식 : <strong>GeoTIFF</strong></li>
+<li>좌표계 : <strong>EPSG:5186</strong></li>
+</ul>
+<figure class="shot figure"><a href="assets/img/researcher/p01-1.webp"><img alt="다운로드 메뉴 화면" height="897" loading="lazy" src="assets/img/researcher/p01-1.webp" width="1600"/></a><figcaption>다운로드 메뉴 화면</figcaption></figure></article><article class="unit" id="open-api"><h2>Open API 연동</h2><p>QGIS에서 국토환경성평가지도를 불러오는 방법 (API KEY 발급 → QGIS 연결)</p>
+<ol>
+<li>홈페이지 상단 → <kbd class="ui">Open API</kbd> → <kbd class="ui">신청</kbd> 메뉴 클릭</li>
+<li>오픈 API 신청에서 <kbd class="ui">모든 약관에 동의합니다.</kbd> 체크</li>
+<li>이름, 이메일, 직업, 사용목적 작성 후 사용 URL에 <kbd class="ui">QGIS</kbd> 입력</li>
+<li>이메일로 API KEY가 발급 확인</li>
+<li>QGIS 탐색기 패널에서 <kbd class="ui">XYZ Tiles</kbd> 우클릭 후 <kbd class="ui">새 연결</kbd> 선택</li>
+<li>레이어 이름 작성 (예: ECVAM, ECVAM_law 등)</li>
+<li>예시를 참고하여 서비스 호출명칭과 API KEY를 포함한 TMS 연결 URL 입력</li>
+<li><kbd class="ui">확인</kbd> 클릭하여 지도 생성</li>
+<li><kbd class="ui">XYZ Tiles</kbd>에 생성된 레이어를 더블클릭하면 QGIS 캔버스에 지도 표시</li>
+<li>Vworld 혹은 Open Street Map과 같이 TMS 활용 가능</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/researcher/p02-1.webp"><img alt="홈페이지 상단 오픈API 메뉴에서 신청 선택 화면" height="458" loading="lazy" src="assets/img/researcher/p02-1.webp" width="1550"/></a><figcaption>홈페이지 상단 오픈API 메뉴에서 신청 선택 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/researcher/p02-2.webp"><img alt="오픈API 신청 약관 동의 화면" height="1125" loading="lazy" src="assets/img/researcher/p02-2.webp" width="1268"/></a><figcaption>오픈API 신청 약관 동의 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/researcher/p02-3.webp"><img alt="오픈API 신청 정보 입력 및 사용 URL에 QGIS 입력 화면" height="761" loading="lazy" src="assets/img/researcher/p02-3.webp" width="1600"/></a><figcaption>오픈API 신청 정보 입력 및 사용 URL에 QGIS 입력 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/researcher/p02-4.webp"><img alt="API KEY 발급 이메일 화면" height="1017" loading="lazy" src="assets/img/researcher/p02-4.webp" width="1152"/></a><figcaption>API KEY 발급 이메일 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/researcher/p02-5.webp"><img alt="QGIS XYZ Tiles 새 연결 및 TMS URL 입력 화면" height="709" loading="lazy" src="assets/img/researcher/p02-5.webp" width="1600"/></a><figcaption>QGIS XYZ Tiles 새 연결 및 TMS URL 입력 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/researcher/p02-6.webp"><img alt="QGIS 캔버스에 표시된 국토환경성평가지도 레이어" height="1125" loading="lazy" src="assets/img/researcher/p02-6.webp" width="1520"/></a><figcaption>QGIS 캔버스에 표시된 국토환경성평가지도 레이어</figcaption></figure></article><article class="unit" id="analysis"><h2>국토환경성평가지도를 활용한 데이터 분석</h2><ul>
+<li>가중치 시뮬레이션</li>
+<li>공간 상관관계 분석</li>
+<li>기후변화 시나리오 적용</li>
+</ul></article></div>
+      <nav class="pager" aria-label="이전·다음 안내">
+<a class="prev" href="planning.html"><small>이전</small><b>환경계획 수립</b></a>      </nav>
+    </div>
+    <details class="toc" open>
+      <summary>이 페이지의 내용</summary>
+      <div class="toc-title">이 페이지의 내용</div>
+      <ol>
+<li><a href="#download">공간정보 원본 데이터 다운로드</a></li><li><a href="#open-api">Open API 연동</a></li><li><a href="#analysis">국토환경성평가지도를 활용한 데이터 분석</a></li>      </ol>
+    </details>
+  </div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <b>국토환경성평가지도 활용안내</b>
+      <p>국토환경성평가지도(ECVAM) 시스템의 이용 방법을 대상자별로 정리한 안내서입니다.<br>「환경정책기본법」 제23조 및 같은 법 시행령 제11조의2에 따라 작성·보급하는 지도를 기준으로 합니다.</p>
+    </div>
+    <ul>
+      <li><a href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">국토환경성평가지도 ecvam.neins.go.kr</a></li>
+      <li><a href="https://www.neins.go.kr" target="_blank" rel="noopener">국토환경정보시스템 neins.go.kr</a></li>
+      <li><a href="https://www.kei.re.kr" target="_blank" rel="noopener">한국환경연구원(KEI)</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

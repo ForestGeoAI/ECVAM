@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>지자체 · 국토환경성평가지도 활용안내</title>
+<meta name="description" content="민원 대응 근거 제시, 재난 취약지 분석, 경관 심의, 행정구역별 등급 통계 관리와 환경영향평가서 검토에 활용하는 방법입니다.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="6" fill="#fff" fill-opacity=".1"/><rect x="4" y="5" width="3.2" height="16" rx="1" fill="var(--g1)"/><rect x="7.7" y="5" width="3.2" height="16" rx="1" fill="var(--g2)"/><rect x="11.4" y="5" width="3.2" height="16" rx="1" fill="var(--g3)"/><rect x="15.1" y="5" width="3.2" height="16" rx="1" fill="var(--g4)"/><rect x="18.8" y="5" width="3.2" height="16" rx="1" fill="var(--g5)"/></svg><span><small>국토환경성평가지도</small>활용안내</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg> 메뉴</button>
+    <nav class="nav" id="nav" aria-label="주요 메뉴">
+<a href="concept.html">개념</a><a href="guide.html">초보자 매뉴얼</a><a href="developer.html">사업자</a><a href="local-gov.html" aria-current="page">지자체</a><a href="eia.html">협의기관</a><a href="planning.html">환경계획</a><a href="researcher.html">연구자</a>      <a class="ext" href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">WebGIS 지도보기 <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg></a>
+    </nav>
+  </div>
+  <div class="grade-band" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</header>
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="현재 위치"><a href="index.html">홈</a><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>대상자별 활용</span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>지자체</span></nav>
+      <div class="page-title"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M4 18h16M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 10h18L12 4z"/></svg></div><h1><small>대상자별 활용</small>지자체</h1></div>
+      <p class="page-lead">민원 대응 근거 제시, 재난 취약지 분석, 경관 심의, 행정구역별 등급 통계 관리와 환경영향평가서 검토에 활용하는 방법입니다.</p>
+    </div>
+  </div>
+  <div class="wrap layout">
+    <div class="content">
+      <div class="units"><article class="unit" id="complaints"><h2>민원 대응 데이터 제시</h2><ul>
+<li>개발행위 허가 시 환경적 불가 사유를 국가 표준 데이터를 활용한 시각적 근거를 시민에게 제시</li>
+</ul>
+<ol>
+<li><kbd class="ui">국토환경성평가등급분석</kbd> → <kbd class="ui">지적분석</kbd>을 통해 해당 필지(주소) 검색</li>
+<li>해당 지점의 <kbd class="ui">상세보기</kbd>를 클릭하여 65개 법적 규제 항목과 8개 생태적 항목 중 어떤 요소가 등급에 영향을 주었는지 확인</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/local-gov/p01-1.webp"><img alt="민원 지점 지적분석 상세보기 화면" height="837" loading="lazy" src="assets/img/local-gov/p01-1.webp" width="1600"/></a><figcaption>민원 지점 지적분석 상세보기 화면</figcaption></figure></article><article class="unit" id="disaster"><h2>재난 취약지 및 안전 관리 분석</h2><ul>
+<li>지형적 불안 요소(급경사 등)와 환경적 보전 가치를 결합하여, 기후 위기에 대응하는 안전한 도시 계획을 수립</li>
+<li>중첩 지역은 산림 훼손 시 재난 발생 가능성이 매우 높으므로, 무분별한 개발 허가를 제한하고 우선 순위 안전 점검 대상지로 지정</li>
+</ul>
+<ol>
+<li>왼쪽 <kbd class="ui">레이어</kbd> 메뉴에서 <kbd class="ui">국토환경성평가지도</kbd> 체크</li>
+<li>같은 메뉴 아래쪽에서 <kbd class="ui">산사태위험지도</kbd> 체크하여 두 레이어를 동시에 활성화</li>
+<li>오른쪽 <kbd class="ui">레이어 선택 보기 창</kbd>에서 투명도 슬라이더를 조절하여 산사태 위험 지역과 환경보전 1~2등급 지역이 겹치는 구간 확인</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/local-gov/p02-1.webp"><img alt="국토환경성평가지도와 산사태위험지도 중첩 화면" height="810" loading="lazy" src="assets/img/local-gov/p02-1.webp" width="1600"/></a><figcaption>국토환경성평가지도와 산사태위험지도 중첩 화면</figcaption></figure></article><article class="unit" id="viewshed"><h2>경관 심의 및 가시권 조회</h2><ul>
+<li>송전탑, 풍력 발전기, 고층 빌딩 등 주요 구조물 설치 시 주변 경관에 미치는 시각적 영향 사전에 검토</li>
+</ul>
+<ol>
+<li>조회하고자 하는 위치를 지도상에서 <strong>마우스 우클릭</strong></li>
+<li>분석하고자 하는 가시권 거리를 입력한 뒤 <kbd class="ui">분석</kbd> 클릭하여 결과 확인</li>
+<li>지도상에 색상으로 표시된 <strong>가시영역</strong>을 통해 시설물이 노출되는 정도를 확인</li>
+<li>중심지로부터 입력거리만큼의 가시권 분석 완료</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/local-gov/p03-1.webp"><img alt="가시권 분석 결과 화면" height="1480" loading="lazy" src="assets/img/local-gov/p03-1.webp" width="1600"/></a><figcaption>가시권 분석 결과 화면</figcaption></figure></article><article class="unit" id="statistics"><h2>행정구역 별 환경 등급 통계 관리</h2><ul>
+<li>우리 지자체의 환경 보전 지역 현황을 수치화하여 환경계획 수립 및 정책 결정의 기초자료로 활용</li>
+</ul>
+<ol>
+<li><kbd class="ui">국토환경성평가지도</kbd> → <kbd class="ui">등급통계</kbd> → 조회하고자 하는 지도의 정보 선택</li>
+<li>조회 대상(시/도, 시/군/구)과 연도를 설정 후 <kbd class="ui">조회</kbd> 클릭</li>
+<li>해당 지역 내 1~5등급 면적과 비율(%) 정보를 확인</li>
+<li>‘시/도’ 선택창에서 ‘전국’을 선택하면, 전국단위의 통계결과 확인</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/local-gov/p04-1.webp"><img alt="등급통계 메뉴 진입 화면" height="1158" loading="lazy" src="assets/img/local-gov/p04-1.webp" width="1600"/></a><figcaption>등급통계 메뉴 진입 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/local-gov/p04-2.webp"><img alt="등급통계 조회 조건 설정 화면" height="833" loading="lazy" src="assets/img/local-gov/p04-2.webp" width="1600"/></a><figcaption>등급통계 조회 조건 설정 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/local-gov/p04-3.webp"><img alt="등급별 면적 및 비율 통계 결과 화면" height="912" loading="lazy" src="assets/img/local-gov/p04-3.webp" width="1240"/></a><figcaption>등급별 면적 및 비율 통계 결과 화면</figcaption></figure></article><article class="unit" id="cases"><h2>활용 사례</h2><h3 id="cases-1">환경영향평가서 검토</h3>
+<ul>
+<li>환경영향평가는 사업의 규모와 성격에 따라 세 가지로 나뉨</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>종류</th>
+<th>대상</th>
+<th>목적</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>환경영향평가</td>
+<td>도시개발, 산업단지, 도로건설 등</td>
+<td>사업 시행 전 환경영향 사전 조사·평가</td>
+</tr>
+<tr>
+<td>전략환경영향평가</td>
+<td>정책·계획·프로그램 수립 단계</td>
+<td>개별사업보다 상위 단계에서 사전 예방 강화</td>
+</tr>
+<tr>
+<td>소규모환경영향평가</td>
+<td>환경영향평가 규모 이하 소규모 사업</td>
+<td>난개발 우려 지역 입지 타당성 평가</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p>제출된 등급 분석 결과 검증</p>
+<ul>
+<li>사업자가 제출한 자료가 정확한지 시스템으로 직접 확인</li>
+</ul>
+<ol>
+<li>평가서에 첨부된 사업 대상지 경계 SHP 파일 확보</li>
+<li><kbd class="ui">국토환경성평가등급분석</kbd> → <kbd class="ui">SHP 파일 분석</kbd> 실행</li>
+<li>시스템 분석결과와 제출 자료를 아래 항목 기준으로 비교</li>
+</ol>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>검토 항목</th>
+<th>확인 방법</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>등급별 면적·비율 일치 여부</td>
+<td>분석 결과 표와 제출 자료 비교</td>
+</tr>
+<tr>
+<td>분석 연도 적정성</td>
+<td>평가서 작성 시점과 지도 갱신 연도 일치 여부 확인</td>
+</tr>
+<tr>
+<td>좌표계 오류 여부</td>
+<td>SHP 분석 결과 위치가 실제와 일치하는지 확인</td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li>
+<p>보호구역 누락 여부 확인</p>
+<ul>
+<li>사업자가 특정 보호구역을 평가서에 빠뜨렸는지 확인</li>
+</ul>
+<ol>
+<li><kbd class="ui">레이어</kbd> → <kbd class="ui">법제적평가항목</kbd>에서 주요 보호구역 레이어를 킴</li>
+<li>사업구역과 보호구역의 중첩여부를 직접 눈으로 확인</li>
+<li>평가서에 기재되지 않은 보호구역이 발견되면 별도 기록</li>
+</ol>
+</li>
+</ul></article></div>
+      <nav class="pager" aria-label="이전·다음 안내">
+<a class="prev" href="developer.html"><small>이전</small><b>토지개발행위 사업자</b></a><a class="next" href="eia.html"><small>다음</small><b>환경영향평가 협의기관</b></a>      </nav>
+    </div>
+    <details class="toc" open>
+      <summary>이 페이지의 내용</summary>
+      <div class="toc-title">이 페이지의 내용</div>
+      <ol>
+<li><a href="#complaints">민원 대응 데이터 제시</a></li><li><a href="#disaster">재난 취약지 및 안전 관리 분석</a></li><li><a href="#viewshed">경관 심의 및 가시권 조회</a></li><li><a href="#statistics">행정구역 별 환경 등급 통계 관리</a></li><li><a href="#cases">활용 사례</a><ol><li><a href="#cases-1">환경영향평가서 검토</a></li></ol></li>      </ol>
+    </details>
+  </div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <b>국토환경성평가지도 활용안내</b>
+      <p>국토환경성평가지도(ECVAM) 시스템의 이용 방법을 대상자별로 정리한 안내서입니다.<br>「환경정책기본법」 제23조 및 같은 법 시행령 제11조의2에 따라 작성·보급하는 지도를 기준으로 합니다.</p>
+    </div>
+    <ul>
+      <li><a href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">국토환경성평가지도 ecvam.neins.go.kr</a></li>
+      <li><a href="https://www.neins.go.kr" target="_blank" rel="noopener">국토환경정보시스템 neins.go.kr</a></li>
+      <li><a href="https://www.kei.re.kr" target="_blank" rel="noopener">한국환경연구원(KEI)</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

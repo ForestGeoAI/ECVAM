@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>토지개발행위 사업자 · 국토환경성평가지도 활용안내</title>
+<meta name="description" content="개발 예정 부지의 환경등급과 입지 규제를 확인하고, 반경·면적 분석과 과거 자료 조회로 사업 추진 전에 환경적 위험 요소를 점검합니다.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="6" fill="#fff" fill-opacity=".1"/><rect x="4" y="5" width="3.2" height="16" rx="1" fill="var(--g1)"/><rect x="7.7" y="5" width="3.2" height="16" rx="1" fill="var(--g2)"/><rect x="11.4" y="5" width="3.2" height="16" rx="1" fill="var(--g3)"/><rect x="15.1" y="5" width="3.2" height="16" rx="1" fill="var(--g4)"/><rect x="18.8" y="5" width="3.2" height="16" rx="1" fill="var(--g5)"/></svg><span><small>국토환경성평가지도</small>활용안내</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg> 메뉴</button>
+    <nav class="nav" id="nav" aria-label="주요 메뉴">
+<a href="concept.html">개념</a><a href="guide.html">초보자 매뉴얼</a><a href="developer.html" aria-current="page">사업자</a><a href="local-gov.html">지자체</a><a href="eia.html">협의기관</a><a href="planning.html">환경계획</a><a href="researcher.html">연구자</a>      <a class="ext" href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">WebGIS 지도보기 <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg></a>
+    </nav>
+  </div>
+  <div class="grade-band" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</header>
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="현재 위치"><a href="index.html">홈</a><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>대상자별 활용</span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>토지개발행위 사업자</span></nav>
+      <div class="page-title"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9h8v12M8 9V5l9-2v6M17 9v12M8 13h2M8 17h2"/></svg></div><h1><small>대상자별 활용</small>토지개발행위 사업자</h1></div>
+      <p class="page-lead">개발 예정 부지의 환경등급과 입지 규제를 확인하고, 반경·면적 분석과 과거 자료 조회로 사업 추진 전에 환경적 위험 요소를 점검합니다.</p>
+    </div>
+  </div>
+  <div class="wrap layout">
+    <div class="content">
+      <div class="units"><article class="unit" id="search"><h2>지번/좌표 검색</h2><ul>
+<li>특정 필지의 환경등급 즉시 확인</li>
+</ul>
+<ol>
+<li>왼쪽 메뉴에서 <strong><kbd class="ui">검색</kbd></strong> 버튼</li>
+<li>위쪽 탭에서 <strong><kbd class="ui">통합검색</kbd></strong> 또는 <strong><kbd class="ui">지번검색</kbd></strong></li>
+<li>검색창에 알고 싶은 땅의 주소(지번)를 적고 <strong><kbd class="ui">검색</kbd></strong></li>
+<li>검색 결과 목록에서 원하는 주소 옆의 <strong><kbd class="ui">분석</kbd></strong> 버튼 클릭</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/developer/p01-1.webp"><img alt="지번검색 화면과 검색 결과 목록의 분석 버튼" height="1626" loading="lazy" src="assets/img/developer/p01-1.webp" width="1600"/></a><figcaption>지번검색 화면과 검색 결과 목록의 분석 버튼</figcaption></figure></article><article class="unit" id="grade-analysis"><h2>국토환경성평가등급 분석 기능</h2><ul>
+<li>해당 부지의 1~5등급 점유율 통계 자동 생성<ul>
+<li>지적 분석: 분석하고자 하는 지적(주소)을 입력하여 분석</li>
+<li>SHP파일 분석: 분석하고자 하는 지역의 SHP파일을 업로드하여 분석</li>
+<li>그리기 분석: 분석하고자 하는 지역의 폴리곤을 그려서 분석</li>
+<li>지점 분석: 분석하고자 하는 지역을 마우스로 클릭하여 분석</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>그리기 분석 선택 후 지도에서 분석할 지역에 폴리곤(도형) 그리기</li>
+<li>결과 화면 상단 버튼으로 SHP 저장, 그림(JPG) 저장, 엑셀(XLS) 저장, 보고서 인쇄</li>
+<li><kbd class="ui">상세보기</kbd>를 통해 평가 세부 항목별 등급 및 평가근거 상세보기</li>
+<li>상세보기 화면에서 평가 세부 항목별 등급 확인</li>
+<li>화면 하단 버튼으로 평가근거 자료 및 평가기준 안내 확인</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/developer/p02-1.webp"><img alt="그리기 분석 결과 화면과 상세보기 화면" height="739" loading="lazy" src="assets/img/developer/p02-1.webp" width="1600"/></a><figcaption>그리기 분석 결과 화면과 상세보기 화면</figcaption></figure></article><article class="unit" id="overlay"><h2>입지 규제 레이어 중첩</h2><p>상수원보호구역, 개발제한구역, 자연공원 등 법적 제한 사항과 주변 생태계와의 연결성 파악</p>
+<ul>
+<li>ⓐ 선택 레이어 순서 조정</li>
+<li>ⓑ 선택 레이어 투명도 조절</li>
+<li>ⓒ 다중 레이어 메타정보 확인</li>
+</ul>
+<figure class="shot figure"><a href="assets/img/developer/p03-1.webp"><img alt="레이어 중첩 화면 — 레이어 순서·투명도 조절 및 메타정보 확인" height="817" loading="lazy" src="assets/img/developer/p03-1.webp" width="1600"/></a><figcaption>레이어 중첩 화면 — 레이어 순서·투명도 조절 및 메타정보 확인</figcaption></figure></article><article class="unit" id="buffer"><h2>반경 분석</h2><p>개발 예정지 주변 0~500m 내 주요 생태축 포함 여부 확인</p>
+<ul>
+<li>민원 및 환경적 리스크 사전 방지</li>
+<li>생태축 연결성 확인</li>
+<li>대안 노선 검토</li>
+</ul>
+<ol>
+<li>왼쪽 메뉴에서 <kbd class="ui">환경입지분석</kbd> 선택</li>
+<li>상단 탭에서 <kbd class="ui">지적분석</kbd> 또는 <kbd class="ui">SHP파일분석</kbd> 선택 후 원하는 지점 지정</li>
+<li>버퍼(반경) 거리와 투명도 설정</li>
+<li><kbd class="ui">환경입지현황 조회</kbd> 클릭</li>
+<li>지도에 반경 원이 표시되고, 왼쪽에 분석 대상 주소, 대상지 총 면적, 총 인구 등 분석 현황 확인</li>
+<li>하단 <kbd class="ui">입지분석 전체현황 조회</kbd> 클릭</li>
+<li>스크리닝 항목별 포함 여부(O/X)와 해당 면적, 비율 확인</li>
+<li><kbd class="ui">면적분석</kbd> 클릭으로 해당하는 레이어별 면적 산출</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/developer/p04-1.webp"><img alt="환경입지분석 화면 — 버퍼 설정과 반경 원 표시" height="646" loading="lazy" src="assets/img/developer/p04-1.webp" width="1600"/></a><figcaption>환경입지분석 화면 — 버퍼 설정과 반경 원 표시</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/developer/p04-2.webp"><img alt="입지분석 전체현황 조회 결과와 면적분석 화면" height="812" loading="lazy" src="assets/img/developer/p04-2.webp" width="1600"/></a><figcaption>입지분석 전체현황 조회 결과와 면적분석 화면</figcaption></figure></article><article class="unit" id="measure"><h2>거리 및 면적 측정</h2><ol>
+<li>지도 오른쪽의 도구 버튼에서 <kbd class="ui">거리 측정하기</kbd> 또는 <kbd class="ui">면적 측정하기</kbd> 클릭</li>
+<li>지도에서 측정할 지역 그리기 (거리는 시작점과 끝점 지정, 면적은 꼭짓점을 차례로 클릭)</li>
+<li>더블 클릭으로 그리기 종료 후 결과 확인 (거리는 km, 면적은 ㎢ 등으로 지도에 표시)</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/developer/p05-1.webp"><img alt="거리 측정하기 도구 사용 화면" height="812" loading="lazy" src="assets/img/developer/p05-1.webp" width="1600"/></a><figcaption>거리 측정하기 도구 사용 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/developer/p05-2.webp"><img alt="면적 측정하기 도구 사용 화면" height="811" loading="lazy" src="assets/img/developer/p05-2.webp" width="1600"/></a><figcaption>면적 측정하기 도구 사용 화면</figcaption></figure></article><article class="unit" id="land-use"><h2>토지이용규제정보</h2><ul>
+<li>환경등급(환경적 가치)과 토지이용규제(법적 규제)를 함께 보면 개발 가능성을 더 정확하게 판단</li>
+</ul>
+<ol>
+<li>주소 혹은 지번 검색 후 <kbd class="ui">이동</kbd> 클릭하여 관심 지역으로 이동</li>
+<li>이동 후 해당 위치에서 마우스 우클릭</li>
+<li>팝업 메뉴에서 <kbd class="ui">토지이용규제정보</kbd> 클릭하여 토지이음 서비스로 이동</li>
+<li>토지이용계획: 개별공시가, 지역지구 등 지정여부, 확인도면 등 정보 확인</li>
+<li>도시 계획: 도시계획도, 도시계획시설, 지구단위계획구역 등 정보 확인</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/developer/p06-1.webp"><img alt="지도 우클릭 팝업 메뉴의 토지이용규제정보 선택 화면" height="1268" loading="lazy" src="assets/img/developer/p06-1.webp" width="1600"/></a><figcaption>지도 우클릭 팝업 메뉴의 토지이용규제정보 선택 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/developer/p06-2.webp"><img alt="토지이음 서비스의 토지이용계획·도시계획 정보 화면" height="1041" loading="lazy" src="assets/img/developer/p06-2.webp" width="1600"/></a><figcaption>토지이음 서비스의 토지이용계획·도시계획 정보 화면</figcaption></figure></article><article class="unit" id="history"><h2>과거 자료 조회</h2><p>주변에서 진행되었던 과거지도(국토환경성평가지도/법제적평가지도/환경·생태적 평가지도) 탐색</p>
+<ul>
+<li>최종 국토환경성평가지도 뿐만 아니라 법제적평가결과, 환경·생태적 평가결과에 대한 각각의 과거 주제도 확인 가능</li>
+<li><kbd class="ui">과거자료조회</kbd> → 필요한 지도선택 → 조회년도 선택</li>
+</ul>
+<figure class="shot portrait"><a href="assets/img/developer/p07-1.webp"><img alt="과거자료조회 메뉴 — 지도 선택 및 조회년도 선택 화면" height="642" loading="lazy" src="assets/img/developer/p07-1.webp" width="455"/></a><figcaption>과거자료조회 메뉴 — 지도 선택 및 조회년도 선택 화면</figcaption></figure></article><article class="unit" id="cases"><h2>활용 사례</h2><h3 id="cases-1">다중 지번 통합 분석 및 데이터 추출</h3>
+<ul>
+<li>여러 개의 필지를 하나의 사업지구로 묶어 분석하고, 통합된 SHP 파일을 생성하는 과정</li>
+</ul>
+<ol>
+<li>왼쪽 메뉴에서 <kbd class="ui">지형분석</kbd>, <kbd class="ui">국토환경성평가등급분석</kbd>, <kbd class="ui">환경입지</kbd> 중 원하는 분석을 선택한 뒤 <kbd class="ui">지적분석</kbd> 클릭</li>
+<li>팝업창의 지적 검색란에 주소를 입력하고 <kbd class="ui">검색</kbd> 클릭</li>
+<li>검색결과에서 원하는 지번 옆의 <kbd class="ui">담기</kbd> 클릭 (이 과정을 반복하여 여러 지번을 한꺼번에 분석 대상에 추가)</li>
+<li>선택된 지적 목록을 확인한 뒤 <kbd class="ui">분석</kbd> 클릭 (잘못 담은 지번은 <kbd class="ui">삭제</kbd>로 제거)</li>
+<li>선택된 영역의 통합 경사도, 고도, 환경 등급 통계가 한 화면에 출력되며, 여러 폴리곤을 하나의 파일로 저장하려면 <kbd class="ui">SHP 저장</kbd> 클릭</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/developer/p08-1.webp"><img alt="지적분석 팝업 — 지번 검색 후 담기로 여러 지번 추가" height="1355" loading="lazy" src="assets/img/developer/p08-1.webp" width="1600"/></a><figcaption>지적분석 팝업 — 지번 검색 후 담기로 여러 지번 추가</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/developer/p08-2.webp"><img alt="다중 지번 통합 분석 결과 및 SHP 저장 화면" height="1695" loading="lazy" src="assets/img/developer/p08-2.webp" width="1600"/></a><figcaption>다중 지번 통합 분석 결과 및 SHP 저장 화면</figcaption></figure></article></div>
+      <nav class="pager" aria-label="이전·다음 안내">
+<a class="prev" href="guide.html"><small>이전</small><b>시스템 이용 초보자를 위한 매뉴얼</b></a><a class="next" href="local-gov.html"><small>다음</small><b>지자체</b></a>      </nav>
+    </div>
+    <details class="toc" open>
+      <summary>이 페이지의 내용</summary>
+      <div class="toc-title">이 페이지의 내용</div>
+      <ol>
+<li><a href="#search">지번/좌표 검색</a></li><li><a href="#grade-analysis">국토환경성평가등급 분석 기능</a></li><li><a href="#overlay">입지 규제 레이어 중첩</a></li><li><a href="#buffer">반경 분석</a></li><li><a href="#measure">거리 및 면적 측정</a></li><li><a href="#land-use">토지이용규제정보</a></li><li><a href="#history">과거 자료 조회</a></li><li><a href="#cases">활용 사례</a><ol><li><a href="#cases-1">다중 지번 통합 분석 및 데이터 추출</a></li></ol></li>      </ol>
+    </details>
+  </div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <b>국토환경성평가지도 활용안내</b>
+      <p>국토환경성평가지도(ECVAM) 시스템의 이용 방법을 대상자별로 정리한 안내서입니다.<br>「환경정책기본법」 제23조 및 같은 법 시행령 제11조의2에 따라 작성·보급하는 지도를 기준으로 합니다.</p>
+    </div>
+    <ul>
+      <li><a href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">국토환경성평가지도 ecvam.neins.go.kr</a></li>
+      <li><a href="https://www.neins.go.kr" target="_blank" rel="noopener">국토환경정보시스템 neins.go.kr</a></li>
+      <li><a href="https://www.kei.re.kr" target="_blank" rel="noopener">한국환경연구원(KEI)</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

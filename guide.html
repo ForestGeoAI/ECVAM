@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>시스템 이용 초보자를 위한 매뉴얼 · 국토환경성평가지도 활용안내</title>
+<meta name="description" content="WebGIS 지도 접속부터 화면 구성, 레이어 조회, 검색, 등급 분석, 모바일 이용까지 기본 사용법을 순서대로 안내합니다.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="6" fill="#fff" fill-opacity=".1"/><rect x="4" y="5" width="3.2" height="16" rx="1" fill="var(--g1)"/><rect x="7.7" y="5" width="3.2" height="16" rx="1" fill="var(--g2)"/><rect x="11.4" y="5" width="3.2" height="16" rx="1" fill="var(--g3)"/><rect x="15.1" y="5" width="3.2" height="16" rx="1" fill="var(--g4)"/><rect x="18.8" y="5" width="3.2" height="16" rx="1" fill="var(--g5)"/></svg><span><small>국토환경성평가지도</small>활용안내</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg> 메뉴</button>
+    <nav class="nav" id="nav" aria-label="주요 메뉴">
+<a href="concept.html">개념</a><a href="guide.html" aria-current="page">초보자 매뉴얼</a><a href="developer.html">사업자</a><a href="local-gov.html">지자체</a><a href="eia.html">협의기관</a><a href="planning.html">환경계획</a><a href="researcher.html">연구자</a>      <a class="ext" href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">WebGIS 지도보기 <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg></a>
+    </nav>
+  </div>
+  <div class="grade-band" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</header>
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="현재 위치"><a href="index.html">홈</a><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>처음 사용하는 분</span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>시스템 이용 초보자를 위한 매뉴얼</span></nav>
+      <div class="page-title"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-8M12 13c0-4.5 3-7.5 8-7.5-.8 5-3.5 7.5-8 7.5zM12 13c0-3.3-2.2-5.5-6-5.5.6 4 2.7 5.5 6 5.5z"/></svg></div><h1><small>처음 사용하는 분</small>시스템 이용 초보자를 위한 매뉴얼</h1></div>
+      <p class="page-lead">WebGIS 지도 접속부터 화면 구성, 레이어 조회, 검색, 등급 분석, 모바일 이용까지 기본 사용법을 순서대로 안내합니다.</p>
+    </div>
+  </div>
+  <div class="wrap layout">
+    <div class="content">
+      <div class="units"><div class="intro"><p><svg aria-hidden="true" class="" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 7.5h.01"></path></svg>별도의 회원가입 없이 누구나 무료로 사용 가능</p><p><svg aria-hidden="true" class="" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 7.5h.01"></path></svg>공간정보 다운로드나 Open API 사용 시에만 로그인 필요</p></div><article class="unit" id="connect"><h2><span class="num">01</span>WebGIS 지도 연결</h2><ol>
+<li><a href="https://ecvam.neins.go.kr/main.do" rel="noopener" target="_blank">https://ecvam.neins.go.kr</a> 홈페이지 메인화면 접속</li>
+<li>
+<p><kbd class="ui">WebGIS 지도보기</kbd> 클릭</p>
+
+</li>
+</ol><figure class="shot figure"><a href="assets/img/beginner/p01-1.webp"><img alt="ECVAM 홈페이지 메인화면의 WebGIS 지도보기 버튼" height="1053" loading="lazy" src="assets/img/beginner/p01-1.webp" width="1600"/></a><figcaption>ECVAM 홈페이지 메인화면의 WebGIS 지도보기 버튼</figcaption></figure></article><article class="unit" id="layout"><h2><span class="num">02</span>WebGIS 시스템 구성</h2><ol>
+<li>메뉴 : 레이어, 검색, 국토환경성평가등급 분석, 지형 분석, 환경입지분석, 과거자료조회</li>
+<li>WebGIS 제공 레이어 목록</li>
+<li>행정구역 이동</li>
+<li>
+<p>레이어 선택 보기 창 on/off <img alt="레이어 선택 보기 창 on/off 아이콘" class="ui-icon" height="28" src="assets/img/beginner/p02-1.png" width="34"/></p>
+
+</li>
+<li>
+<p>의견보내기, 지도 저장, 지도 인쇄, 화면 분할 <img alt="의견보내기, 지도 저장, 지도 인쇄, 화면 분할 아이콘" class="ui-icon" height="30" src="assets/img/beginner/p02-2.png" width="226"/></p>
+
+</li>
+<li>
+<p>지도 확대 및 축소</p>
+</li>
+<li>
+<p>지도 전체보기, 면적 측정하기, 거리 측정하기, 도형 삭제, URL 공유 <img alt="지도 전체보기, 면적 측정, 거리 측정, 도형 삭제, URL 공유 아이콘" class="ui-icon tall" height="57" src="assets/img/beginner/p02-3.png" width="267"/></p>
+
+</li>
+<li>
+<p>배경지도 선택 <img alt="배경지도 선택 아이콘" class="ui-icon tall" height="37" src="assets/img/beginner/p02-4.png" width="36"/></p>
+
+</li>
+<li>
+<p>마우스 우클릭 분석</p>
+</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/beginner/p02-5.webp"><img alt="WebGIS 시스템 구성 전체 화면(번호 표시)" height="832" loading="lazy" src="assets/img/beginner/p02-5.webp" width="1600"/></a><figcaption>WebGIS 시스템 구성 전체 화면(번호 표시)</figcaption></figure></article><article class="unit" id="layers"><h2><span class="num">03</span>레이어 조회 기능</h2><ol>
+<li>
+<p>선택된 레이어 개수 표시 <img alt="선택된 레이어 개수 표시 아이콘" class="ui-icon" height="33" src="assets/img/beginner/p03-1.png" width="35"/></p>
+
+</li>
+<li>
+<p>선택 레이어 초기화 <img alt="선택 레이어 초기화 아이콘" class="ui-icon" height="33" src="assets/img/beginner/p03-2.png" width="35"/></p>
+
+</li>
+<li>
+<p>선택된 레이어를 볼 수 있는 <kbd class="ui">레이어 선택 보기 창</kbd></p>
+</li>
+<li>
+<p>선택 레이어 순서 조정 <img alt="선택 레이어 순서 조정 아이콘" class="ui-icon tall" height="42" src="assets/img/beginner/p03-3.png" width="83"/></p>
+
+</li>
+<li>
+<p>선택 레이어 투명도 조절 <img alt="선택 레이어 투명도 조절 슬라이더" class="ui-icon" height="29" src="assets/img/beginner/p03-4.png" width="75"/></p>
+
+</li>
+<li>
+<p>레이어 on/off 와 레이어 선택 해제 <img alt="레이어 on/off 및 선택 해제 아이콘" class="ui-icon" height="24" src="assets/img/beginner/p03-5.png" width="60"/></p>
+
+</li>
+<li>
+<p>개별 레이어 메타정보 확인 <img alt="개별 레이어 메타정보 확인 아이콘" class="ui-icon tall" height="38" src="assets/img/beginner/p03-6.png" width="41"/></p>
+
+</li>
+<li>
+<p>지도 다운로드 <img alt="지도 다운로드 아이콘" class="ui-icon tall" height="37" src="assets/img/beginner/p03-7.png" width="37"/></p>
+
+</li>
+<li>
+<p><kbd class="ui">선택된 레이어 정보보기</kbd> 통해 다중 레이어 메타정보 확인 <img alt="선택된 레이어 정보보기 아이콘" class="ui-icon" height="20" src="assets/img/beginner/p03-9.png" width="20"/></p>
+
+</li>
+<li>
+<p>레이어 메타정보 엑셀 다운로드 <img alt="레이어 메타정보 엑셀 다운로드 아이콘" class="ui-icon" height="20" src="assets/img/beginner/p03-10.png" width="20"/></p>
+
+</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/beginner/p03-8.webp"><img alt="레이어 조회 기능 전체 화면(번호 표시)" height="836" loading="lazy" src="assets/img/beginner/p03-8.webp" width="1600"/></a><figcaption>레이어 조회 기능 전체 화면(번호 표시)</figcaption></figure></article><article class="unit" id="split-view"><h2><span class="num">04</span>분할화면 보기</h2><ol>
+<li>분할화면 보기</li>
+<li>분할화면 좌·우측 레이어 설정</li>
+<li>좌·우 화면서 공통적으로 활용가능한 메뉴<ul>
+<li>지도 전체보기, 면적 측정, 거리측정, 도형삭제, 줌 레벨</li>
+</ul>
+</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/beginner/p04-1.webp"><img alt="분할화면 보기 전체 화면(번호 표시)" height="838" loading="lazy" src="assets/img/beginner/p04-1.webp" width="1600"/></a><figcaption>분할화면 보기 전체 화면(번호 표시)</figcaption></figure></article><article class="unit" id="basemap"><h2><span class="num">05</span>배경지도, 도엽도, 지적도 등 조회</h2><ol>
+<li>통계청에서 제공하는 시도/시군구/읍면동 단위의 행정구역도 제공</li>
+<li>국토지리정보원에서 제공하는 1:25,000 축적 및 1:5,000 축적의 도엽도 제공</li>
+<li>브이월드에서 API로 제공하는 지적도, 토지소유정보 연계 제공</li>
+<li>브이월드에서 API로 제공하는 5가지 배경지도 연계 제공</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/beginner/p05-1.webp"><img alt="배경지도, 도엽도, 지적도 조회 전체 화면(번호 표시)" height="811" loading="lazy" src="assets/img/beginner/p05-1.webp" width="1600"/></a><figcaption>배경지도, 도엽도, 지적도 조회 전체 화면(번호 표시)</figcaption></figure></article><article class="unit" id="search"><h2><span class="num">06</span>통합검색, 지번검색</h2><ol>
+<li>통합검색 : 도엽/명칭/행정구역명 등 자연어 기반 검색</li>
+<li>지번검색 : 지역 선택 후 지번으로 검색</li>
+<li>검색결과에서 <kbd class="ui">이동</kbd> 버튼 클릭하여 해당 위치로 이동</li>
+<li>
+<p>검색결과에서 <kbd class="ui">분석</kbd> 버튼 클릭하여 해당 위치로 분석 가능</p>
+
+</li>
+</ol><figure class="shot figure"><a href="assets/img/beginner/p06-1.webp"><img alt="통합검색 및 지번검색 화면(번호 표시)" height="1751" loading="lazy" src="assets/img/beginner/p06-1.webp" width="1600"/></a><figcaption>통합검색 및 지번검색 화면(번호 표시)</figcaption></figure></article><article class="unit" id="grade-analysis"><h2><span class="num">07</span>국토환경성 평가등급 분석</h2><ol>
+<li>국토환경성평가등급 분석 기능으로 지적분석/SHP 파일 분석/ 그리기분석/지점분석 옵션 제공<ul>
+<li>지적 분석: 분석하고자 하는 지적(주소)을 입력하여 분석</li>
+<li>SHP파일 분석: 분석하고자 하는 지역의 SHP파일을 업로드하여 분석</li>
+<li>그리기 분석: 분석하고자 하는 지역의 폴리곤을 그려서 분석</li>
+<li>지점 분석: 분석하고자 하는 지역을 마우스로 클릭하여 분석</li>
+</ul>
+</li>
+<li>
+<p>분석 지역 SHP 파일 다운로드, 분석 결과 그림으로 저장, 분석 결과 엑셀로 저장, 분석 결과 보고서 인쇄 <img alt="SHP 다운로드, 그림 저장, 엑셀 저장, 보고서 인쇄 아이콘" class="ui-icon" height="24" src="assets/img/beginner/p07-1.png" width="190"/></p>
+
+</li>
+<li>
+<p>분석 결과 지도 보기</p>
+</li>
+<li>
+<p>URL 복사, 지도 현위치 이동, 분석 결과 원형 그래프로 보기, 분석 결과 막대그래프로 보기 <img alt="URL 복사, 현위치 이동, 원형 그래프, 막대그래프 아이콘" class="ui-icon tall" height="36" src="assets/img/beginner/p07-2.png" width="119"/></p>
+
+</li>
+<li>
+<p>분석 지역의 등급별 면적 및 비율</p>
+</li>
+<li>평가 세부 항목별 등급 및 평가근거 상세보기</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/beginner/p07-3.webp"><img alt="국토환경성 평가등급 분석 전체 화면(번호 표시)" height="774" loading="lazy" src="assets/img/beginner/p07-3.webp" width="1600"/></a><figcaption>국토환경성 평가등급 분석 전체 화면(번호 표시)</figcaption></figure></article><article class="unit" id="mobile"><h2><span class="num">08</span>모바일 사용자 매뉴얼</h2><h3 id="mobile-1">모바일 WebGIS 메인 화면 구성</h3>
+<ul>
+<li><kbd class="ui">국토환경성평가지도-메인화면</kbd> → <kbd class="ui">국토환경성평가지도 WebGIS 지도보기</kbd> 클릭</li>
+</ul>
+<figure class="shot figure"><a href="assets/img/beginner/p08-1.webp"><img alt="모바일 메인화면에서 WebGIS 지도보기 진입 화면" height="1030" loading="lazy" src="assets/img/beginner/p08-1.webp" width="1600"/></a><figcaption>모바일 메인화면에서 WebGIS 지도보기 진입 화면</figcaption></figure>
+<ol>
+<li>레이어 구성 : 국토환경성평가지도, 법제적 평가항목, 환경생태적 평가항목, 환경 주제도, 환경관련 참조정보, 행정구역도/지적도, 대기/물 환경</li>
+<li>배경지도 선택 기능 : 지도, 위성, 야간, 흰색</li>
+</ol>
+<figure class="shot figure"><a href="assets/img/beginner/p08-2.webp"><img alt="모바일 WebGIS 메인 화면 구성(레이어 및 배경지도 선택)" height="1413" loading="lazy" src="assets/img/beginner/p08-2.webp" width="1600"/></a><figcaption>모바일 WebGIS 메인 화면 구성(레이어 및 배경지도 선택)</figcaption></figure>
+<h3 id="mobile-2">국토환경성평가 지적분석</h3>
+<ul>
+<li><kbd class="ui">메뉴</kbd> 에서 <kbd class="ui">국토환경성평가 지적분석</kbd>, <kbd class="ui">경사도 지적분석</kbd>, <kbd class="ui">표고 지적분석</kbd> 원하는 분석 선택</li>
+<li>
+<p>주소 검색하여 원하는 주소를 선택하여 <kbd class="ui">담기</kbd> → <kbd class="ui">분석</kbd> 실행</p>
+
+</li>
+</ul><figure class="shot figure"><a href="assets/img/beginner/p08-3.webp"><img alt="모바일 메뉴에서 지적분석 항목 선택 화면" height="1359" loading="lazy" src="assets/img/beginner/p08-3.webp" width="1600"/></a><figcaption>모바일 메뉴에서 지적분석 항목 선택 화면</figcaption></figure>
+<figure class="shot figure"><a href="assets/img/beginner/p08-4.webp"><img alt="모바일 지적분석 주소 검색 및 담기·분석 실행 화면" height="906" loading="lazy" src="assets/img/beginner/p08-4.webp" width="1600"/></a><figcaption>모바일 지적분석 주소 검색 및 담기·분석 실행 화면</figcaption></figure>
+<h3 id="mobile-3">현 위치 지점 분석</h3>
+<ul>
+<li><kbd class="ui">돋보기</kbd> : 주소 및 건물명 검색</li>
+<li><kbd class="ui">현 위치 지점분석</kbd> → 원하는 항목(국토환경성평가지도, 법제적 평가결과, 환경생태적 평가결과)을 선택하여 지도결과 확인</li>
+<li><kbd class="ui">상세보기</kbd> 클릭하여 원하는 항목의 해당 레이어 평가등급 확인</li>
+</ul>
+<figure class="shot figure"><a href="assets/img/beginner/p08-5.webp"><img alt="모바일 현 위치 지점 분석 결과 화면" height="680" loading="lazy" src="assets/img/beginner/p08-5.webp" width="1600"/></a><figcaption>모바일 현 위치 지점 분석 결과 화면</figcaption></figure>
+<h3 id="mobile-4">현 위치 지적 분석</h3>
+<ul>
+<li><kbd class="ui">돋보기</kbd> : 주소 및 건물명 검색</li>
+<li><kbd class="ui">현 위치 지적분석</kbd> → 원하는 항목(국토환경성평가지도, 법제적 평가결과, 환경생태적 평가결과)을 선택하여 지도결과 확인</li>
+<li><kbd class="ui">상세보기</kbd> 클릭하여 원하는 항목의 해당 레이어 평가등급 확인</li>
+<li>
+<p><kbd class="ui">대기 측정소</kbd>, <kbd class="ui">물환경 측정소</kbd>는 주변에 측정소가 없는 경우 확인불가</p>
+
+</li>
+</ul><figure class="shot figure"><a href="assets/img/beginner/p08-6.webp"><img alt="모바일 현 위치 지적 분석 결과 화면" height="688" loading="lazy" src="assets/img/beginner/p08-6.webp" width="1600"/></a><figcaption>모바일 현 위치 지적 분석 결과 화면</figcaption></figure>
+<h3 id="mobile-5">원하는 지점 분석</h3>
+<ul>
+<li>원하는 지점 길게 눌러서 주소 확인</li>
+<li><kbd class="ui">국토환경성평가 분석</kbd>, <kbd class="ui">경사도 분석</kbd>, <kbd class="ui">표고 분석</kbd>, <kbd class="ui">대기 측정소</kbd>, <kbd class="ui">물환경 측정소</kbd>, <kbd class="ui">토지이용규제정보</kbd>, <kbd class="ui">도시계획 열람</kbd> 중 원하는 분석 선택</li>
+<li>
+<p><kbd class="ui">토지이용규제정보</kbd>, <kbd class="ui">도시계획 열람</kbd>은 토지이음 사이트로 연결하여 규제정보 서비스 조회</p>
+
+
+</li>
+</ul><figure class="shot figure"><a href="assets/img/beginner/p08-7.webp"><img alt="모바일 지도에서 지점 길게 눌러 주소 확인 및 분석 메뉴 화면" height="1346" loading="lazy" src="assets/img/beginner/p08-7.webp" width="1600"/></a><figcaption>모바일 지도에서 지점 길게 눌러 주소 확인 및 분석 메뉴 화면</figcaption></figure><figure class="shot figure"><a href="assets/img/beginner/p08-8.webp"><img alt="모바일 원하는 지점 분석 결과 및 토지이음 연결 화면" height="921" loading="lazy" src="assets/img/beginner/p08-8.webp" width="1600"/></a><figcaption>모바일 원하는 지점 분석 결과 및 토지이음 연결 화면</figcaption></figure>
+<h3 id="mobile-6">레이어 구성</h3>
+<figure class="shot portrait"><a href="assets/img/beginner/p08-9.webp"><img alt="모바일 레이어 구성 목록 화면" height="2450" loading="lazy" src="assets/img/beginner/p08-9.webp" width="1375"/></a><figcaption>모바일 레이어 구성 목록 화면</figcaption></figure>
+<ul>
+<li>
+<p>국토환경성평가지도</p>
+<figure class="shot figure"><a href="assets/img/beginner/p08-10.webp"><img alt="모바일 레이어: 국토환경성평가지도" height="1349" loading="lazy" src="assets/img/beginner/p08-10.webp" width="1600"/></a><figcaption>모바일 레이어: 국토환경성평가지도</figcaption></figure>
+</li>
+<li>
+<p>법제적평가항목</p>
+<figure class="shot figure"><a href="assets/img/beginner/p08-11.webp"><img alt="모바일 레이어: 법제적평가항목" height="908" loading="lazy" src="assets/img/beginner/p08-11.webp" width="1600"/></a><figcaption>모바일 레이어: 법제적평가항목</figcaption></figure>
+</li>
+<li>
+<p>환경·생태적 평가항목</p>
+<figure class="shot figure"><a href="assets/img/beginner/p08-12.webp"><img alt="모바일 레이어: 환경·생태적 평가항목" height="1396" loading="lazy" src="assets/img/beginner/p08-12.webp" width="1600"/></a><figcaption>모바일 레이어: 환경·생태적 평가항목</figcaption></figure>
+</li>
+<li>
+<p>환경 주제도</p>
+<figure class="shot figure"><a href="assets/img/beginner/p08-13.webp"><img alt="모바일 레이어: 환경 주제도" height="1358" loading="lazy" src="assets/img/beginner/p08-13.webp" width="1600"/></a><figcaption>모바일 레이어: 환경 주제도</figcaption></figure>
+</li>
+<li>
+<p>환경관련 참조정보</p>
+<figure class="shot figure"><a href="assets/img/beginner/p08-14.webp"><img alt="모바일 레이어: 환경관련 참조정보" height="905" loading="lazy" src="assets/img/beginner/p08-14.webp" width="1600"/></a><figcaption>모바일 레이어: 환경관련 참조정보</figcaption></figure>
+</li>
+<li>
+<p>행정구역도/지적도</p>
+<figure class="shot figure"><a href="assets/img/beginner/p08-15.webp"><img alt="모바일 레이어: 행정구역도/지적도" height="1390" loading="lazy" src="assets/img/beginner/p08-15.webp" width="1600"/></a><figcaption>모바일 레이어: 행정구역도/지적도</figcaption></figure>
+</li>
+<li>
+<p>대기/물환경</p>
+<figure class="shot portrait"><a href="assets/img/beginner/p08-16.webp"><img alt="모바일 레이어: 대기/물환경" height="2475" loading="lazy" src="assets/img/beginner/p08-16.webp" width="1410"/></a><figcaption>모바일 레이어: 대기/물환경</figcaption></figure>
+</li>
+</ul></article></div>
+      <nav class="pager" aria-label="이전·다음 안내">
+<a class="prev" href="concept.html"><small>이전</small><b>국토환경성평가지도 개념</b></a><a class="next" href="developer.html"><small>다음</small><b>토지개발행위 사업자</b></a>      </nav>
+    </div>
+    <details class="toc" open>
+      <summary>이 페이지의 내용</summary>
+      <div class="toc-title">이 페이지의 내용</div>
+      <ol>
+<li><a href="#connect">WebGIS 지도 연결</a></li><li><a href="#layout">WebGIS 시스템 구성</a></li><li><a href="#layers">레이어 조회 기능</a></li><li><a href="#split-view">분할화면 보기</a></li><li><a href="#basemap">배경지도, 도엽도, 지적도 등 조회</a></li><li><a href="#search">통합검색, 지번검색</a></li><li><a href="#grade-analysis">국토환경성 평가등급 분석</a></li><li><a href="#mobile">모바일 사용자 매뉴얼</a><ol><li><a href="#mobile-1">모바일 WebGIS 메인 화면 구성</a></li><li><a href="#mobile-2">국토환경성평가 지적분석</a></li><li><a href="#mobile-3">현 위치 지점 분석</a></li><li><a href="#mobile-4">현 위치 지적 분석</a></li><li><a href="#mobile-5">원하는 지점 분석</a></li><li><a href="#mobile-6">레이어 구성</a></li></ol></li>      </ol>
+    </details>
+  </div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <b>국토환경성평가지도 활용안내</b>
+      <p>국토환경성평가지도(ECVAM) 시스템의 이용 방법을 대상자별로 정리한 안내서입니다.<br>「환경정책기본법」 제23조 및 같은 법 시행령 제11조의2에 따라 작성·보급하는 지도를 기준으로 합니다.</p>
+    </div>
+    <ul>
+      <li><a href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">국토환경성평가지도 ecvam.neins.go.kr</a></li>
+      <li><a href="https://www.neins.go.kr" target="_blank" rel="noopener">국토환경정보시스템 neins.go.kr</a></li>
+      <li><a href="https://www.kei.re.kr" target="_blank" rel="noopener">한국환경연구원(KEI)</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>국토환경성평가지도 개념 · 국토환경성평가지도 활용안내</title>
+<meta name="description" content="전국 토지의 환경적 가치를 1~5등급으로 평가한 지도입니다. 왜 만들었는지, 어떤 법에 근거하는지, 등급이 무엇을 뜻하고 어떻게 산정되는지 정리했습니다.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="6" fill="#fff" fill-opacity=".1"/><rect x="4" y="5" width="3.2" height="16" rx="1" fill="var(--g1)"/><rect x="7.7" y="5" width="3.2" height="16" rx="1" fill="var(--g2)"/><rect x="11.4" y="5" width="3.2" height="16" rx="1" fill="var(--g3)"/><rect x="15.1" y="5" width="3.2" height="16" rx="1" fill="var(--g4)"/><rect x="18.8" y="5" width="3.2" height="16" rx="1" fill="var(--g5)"/></svg><span><small>국토환경성평가지도</small>활용안내</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg> 메뉴</button>
+    <nav class="nav" id="nav" aria-label="주요 메뉴">
+<a href="concept.html" aria-current="page">개념</a><a href="guide.html">초보자 매뉴얼</a><a href="developer.html">사업자</a><a href="local-gov.html">지자체</a><a href="eia.html">협의기관</a><a href="planning.html">환경계획</a><a href="researcher.html">연구자</a>      <a class="ext" href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">WebGIS 지도보기 <svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M19 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6"/></svg></a>
+    </nav>
+  </div>
+  <div class="grade-band" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</header>
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="현재 위치"><a href="index.html">홈</a><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>기본 개념</span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>국토환경성평가지도 개념</span></nav>
+      <div class="page-title"><div class="ico"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5.9 1.1 1 1.8V17h5v-1.3c.1-.7.4-1.3 1-1.8A6 6 0 0 0 12 3z"/></svg></div><h1><small>기본 개념</small>국토환경성평가지도 개념</h1></div>
+      <p class="page-lead">전국 토지의 환경적 가치를 1~5등급으로 평가한 지도입니다. 왜 만들었는지, 어떤 법에 근거하는지, 등급이 무엇을 뜻하고 어떻게 산정되는지 정리했습니다.</p>
+    </div>
+  </div>
+  <div class="wrap layout">
+    <div class="content">
+      <div class="single"><h2 id="what">국토환경성평가지도란?</h2>
+<ul>
+<li>국토를 친환경적·계획적으로 보전하고 이용하기 위해, 전국 토지의 환경적 가치를 종합 평가한 지도</li>
+<li>환경적 중요도에 따라 <strong>1~5등급</strong>으로 나누고 색깔을 달리 표시하여 알기 쉽게 작성한 지도</li>
+</ul>
+<h2 id="background">추진배경</h2>
+<ul>
+<li>국토환경의 효율적 보전 및 친환경적이고 지속가능한 이용을 위한 국토환경성평가지도 개발 및 구축·운영</li>
+<li>국토의 환경정보를 종합적·과학적으로 평가하여 대국민 서비스 제공</li>
+<li>국토계획 및 환경계획 통합관리를 위한 기술적 지원 정보 공유체계 구축</li>
+</ul>
+<h2 id="legal-basis">추진 근거</h2>
+<ul>
+<li>「환경정책기본법」 제23조(환경친화적 계획기법등의 작성·보급) 제2항 "국토환경을 효율적으로 보전하고 국토를 환경친화적으로 이용하기 위하여 국토에 대한 환경적 가치를 평가하여 표시한 환경성평가지도를 작성·보급할 수 있다."</li>
+<li>「환경정책기본법 시행령」 제11조의2(환경성 평가지도의 작성)</li>
+<li>환경부예규 「국토환경성평가지도 작성 및 운영지침」</li>
+</ul>
+<h2 id="grades">등급의 의미</h2>
+<ul>
+<li>환경적 보전가치에 따라 1등급부터 5등급까지 5개 등급으로 구분됨</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>등급</th>
+<th>환경적 가치</th>
+<th>해당 지역 특성</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="grade-chip g1">1등급</span></td>
+<td>매우 높음</td>
+<td>법·제도로 보호되거나, 생태적으로 우수한 자연환경을 지닌 지역</td>
+</tr>
+<tr>
+<td><span class="grade-chip g2">2등급</span></td>
+<td>높음</td>
+<td>법제적·생태적으로 다소 우수한 자연환경을 지닌 지역</td>
+</tr>
+<tr>
+<td><span class="grade-chip g3">3등급</span></td>
+<td>보통</td>
+<td>우수한 자연환경 주변 지역. 친환경적 계획 수립을 원칙으로 함</td>
+</tr>
+<tr>
+<td><span class="grade-chip g4">4등급</span></td>
+<td>낮음</td>
+<td>기 개발지 인근. 환경용량을 고려한 친환경 개발 유도 지역</td>
+</tr>
+<tr>
+<td><span class="grade-chip g5">5등급</span></td>
+<td>매우 낮음</td>
+<td>이미 개발된 지역. 환경을 충분히 배려하며 개발을 수용해야 하는 지역</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><kbd class="ui">상세보기</kbd>를 통해 <strong>어떤 평가항목이 등급을 결정했는지</strong> 확인하는 것이 중요</li>
+<li>같은 1등급이라도 상수원보호구역 때문인지, 멸종위기 서식지 때문인지에 따라 대응 방법이 달라짐</li>
+</ul>
+<h2 id="process">평가 과정</h2>
+<ul>
+<li>국토환경성평가지도는 관련 부처에서 수집된 환경공간정보를 활용하여 법제적 평가항목과 환경·생태적 평가항목을 기반으로 구축</li>
+<li>국토환경성평가지도는 최소지표법을 통해 70여개 평가항목 중 가장 높은 등급이 최종등급으로 선정</li>
+<li>평가항목별로 자연지역, 준자연지역, 인공지역으로 구분된 지역구분도에 따라 분류하여 평가</li>
+</ul>
+<h2 id="legal-items">법제적 평가항목</h2>
+<ul>
+<li>토지의 보전 및 보호와 관련된 각종 법 제도상 토지이용 규제를 목적으로 하는 지역을 기반으로 5개 부문 62개 항목으로 구성</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>부문</th>
+<th>대표 항목</th>
+<th>개수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>자연환경</td>
+<td>생태·경관보전지역, 야생생물보호구역, 국립공원</td>
+<td>15개</td>
+</tr>
+<tr>
+<td>물환경</td>
+<td>하천구역, 상수원보호구역, 수변구역</td>
+<td>12개</td>
+</tr>
+<tr>
+<td>토지이용</td>
+<td>자연환경보전지역, 개발제한구역</td>
+<td>13개</td>
+</tr>
+<tr>
+<td>농림</td>
+<td>산림유전자원보호구역, 토석채취제한지역</td>
+<td>9개</td>
+</tr>
+<tr>
+<td>기타</td>
+<td>특별관리해역, 천연보호구역, 특정도서</td>
+<td>13개</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="eco-items">환경·생태적 평가항목</h2>
+<ul>
+<li>자연환경의 보전·보호와 관련된 각종 정보를 바탕으로 8개의 부문으로 구성</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>의미</th>
+<th>사용 데이터</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>다양성</td>
+<td>다양한 생물종의 서식처 역할</td>
+<td>동식물평가, 습지등급</td>
+</tr>
+<tr>
+<td>자연성</td>
+<td>식생의 건강성 정도</td>
+<td>식생보전등급, 임상도 영급</td>
+</tr>
+<tr>
+<td>풍부도</td>
+<td>종의 개체수 풍부 여부</td>
+<td>생태계변화관찰지역</td>
+</tr>
+<tr>
+<td>희귀성</td>
+<td>멸종위기 야생동물 서식 여부</td>
+<td>멸종위기 야생동물 발견지점</td>
+</tr>
+<tr>
+<td>허약성</td>
+<td>인간활동으로 영향받을 가능성</td>
+<td>도로, 시가화지역</td>
+</tr>
+<tr>
+<td>잠재적 가치</td>
+<td>야생동물 서식처 잠재 가능성</td>
+<td>멸종위기종 발견지점 유사 지역</td>
+</tr>
+<tr>
+<td>군집구조 안정성</td>
+<td>산림 식생구조의 안정성</td>
+<td>임상도 경급·소밀도</td>
+</tr>
+<tr>
+<td>연계성</td>
+<td>녹지·수계 서식처 간 연결성</td>
+<td>생태축 1~4등급</td>
+</tr>
+</tbody>
+</table></div></div>
+      <nav class="pager" aria-label="이전·다음 안내">
+<a class="next" href="guide.html"><small>다음</small><b>시스템 이용 초보자를 위한 매뉴얼</b></a>      </nav>
+    </div>
+    <details class="toc" open>
+      <summary>이 페이지의 내용</summary>
+      <div class="toc-title">이 페이지의 내용</div>
+      <ol>
+<li><a href="#what">국토환경성평가지도란?</a></li><li><a href="#background">추진배경</a></li><li><a href="#legal-basis">추진 근거</a></li><li><a href="#grades">등급의 의미</a></li><li><a href="#process">평가 과정</a></li><li><a href="#legal-items">법제적 평가항목</a></li><li><a href="#eco-items">환경·생태적 평가항목</a></li>      </ol>
+    </details>
+  </div>
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <b>국토환경성평가지도 활용안내</b>
+      <p>국토환경성평가지도(ECVAM) 시스템의 이용 방법을 대상자별로 정리한 안내서입니다.<br>「환경정책기본법」 제23조 및 같은 법 시행령 제11조의2에 따라 작성·보급하는 지도를 기준으로 합니다.</p>
+    </div>
+    <ul>
+      <li><a href="https://ecvam.neins.go.kr" target="_blank" rel="noopener">국토환경성평가지도 ecvam.neins.go.kr</a></li>
+      <li><a href="https://www.neins.go.kr" target="_blank" rel="noopener">국토환경정보시스템 neins.go.kr</a></li>
+      <li><a href="https://www.kei.re.kr" target="_blank" rel="noopener">한국환경연구원(KEI)</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
